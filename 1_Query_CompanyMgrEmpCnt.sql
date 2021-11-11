@@ -7,3 +7,5 @@ select cmpny.company_code,cmpny.founder,count(distinct lmgr.lead_manager_code),
         smgr.senior_manager_code = mgr.senior_manager_code and
         mgr.manager_code = emp.manager_code
             group by cmpny.company_code,cmpny.founder
+            order by cmpny.company_code
+            
